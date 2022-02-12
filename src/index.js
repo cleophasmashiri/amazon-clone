@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { CometChat } from '@cometchat-pro/chat';
+
+const appSettings = new CometChat.AppSettingsBuilder()
+.subscribePresenceForAllUsers()
+.setRegion(process.env.RE)
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
